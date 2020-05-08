@@ -12,14 +12,10 @@ let clickHandler = function() {
   let prefixURL = 'https://dog.ceo/api/breed/';
   let suffixURL = '/images/random/6';
   //get value entered by user from textbox
-
-  let breedTag = $('input[type = "text"]').val().toLowerCase();
-
-
-  //let breedTag = (document.querySelector('input[type = "text"]').value).toLowerCase();
+  let tempTag = $('input[type = "text"]').val().toLowerCase();
+  let breedArr = tempTag.split(" ").reverse();
+  let breedTag = breedArr.join("/");
   let requestURL = prefixURL + breedTag + suffixURL;
-  //console.log(requestURL);
-
 
   //clear old photos
   $('.photos').html('');

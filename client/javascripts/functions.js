@@ -53,7 +53,7 @@ let findAllbitBatBotOrNots1 = (arr) => {
 //Req. 4d
 let findAllbitBatBotOrNots2 = (arr) => {
   let resultArray = [];
-  for (let i in arr) {
+  for (i = 0; i < arr.length; ++i) {
     let newVal = bitBatBotOrNot(arr[i]);
     resultArray.push(`${arr[i]}: ${newVal}`);
   }
@@ -82,6 +82,17 @@ let findAllbitBatBotOrNots4 = (arr) => {
     arrVal.push(`${num}: ${bitStr}`);
   });
   return arrVal;
+};
+
+
+//Part 5 - Extra Credit
+let findAllbitBatBotOrNotsXC = (arr) => {
+  let resultArray = [];
+  for (let i in arr) {
+    let newVal = bitBatBotOrNot(arr[i]);
+    resultArray.push(`${arr[i]}: ${newVal}`);
+  }
+  return resultArray;
 };
 
 //test the functions

@@ -40,25 +40,48 @@ let bitBatBotOrNot = (n) => {
 
 //Req. 4c
 let findAllbitBatBotOrNots1 = (arr) => {
-
+  let numArray = "";
+  let resultArray = arr.map(function(num) {
+    //let returnVal = `${num}` + ": " + bitBatBotOrNot(num);
+    let bitStr = bitBatBotOrNot(num);
+    return `${num}: ${bitStr}`;
+  });
+  return resultArray;
 };
 
 
-
-//Re
+//Req. 4d
 let findAllbitBatBotOrNots2 = (arr) => {
-  //your code goes here
-  //use for statement
+  let resultArray = [];
+  for (let i in arr) {
+    let newVal = bitBatBotOrNot(arr[i]);
+    resultArray.push(`${arr[i]}: ${newVal}`);
+  }
+  return resultArray;
 };
 
+
+
+//Req. 4e
 let findAllbitBatBotOrNots3 = (arr) => {
-  //your code goes here
-  //use for..of statement
+  let resultArray = [];
+  for (let num of arr) {
+    let newVal = bitBatBotOrNot(num);
+    resultArray.push(`${num}: ${newVal}`);
+  }
+  return resultArray;
 };
 
+
+
+//Req. 4f
 let findAllbitBatBotOrNots4 = (arr) => {
-  //your code goes here
-  //use forEach method
+  let arrVal = [];
+  let resultArray = arr.forEach(function(num) {
+    let bitStr = bitBatBotOrNot(num);
+    arrVal.push(`${num}: ${bitStr}`);
+  });
+  return arrVal;
 };
 
 //test the functions

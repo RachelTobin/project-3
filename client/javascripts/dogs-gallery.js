@@ -34,7 +34,6 @@ let clickHandler = function() {
       imgElem.hidden = true;
 
       // set the attribute to the response url
-
       imgElem.attr('src', imgURL);
       imgElem.attr('width', '100');
 
